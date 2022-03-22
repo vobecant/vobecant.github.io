@@ -179,6 +179,22 @@
 
         gtag('config', 'UA-75863369-6');
     </script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/favicon.svg">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
 </head>
 
 <body>
@@ -232,42 +248,64 @@
         <table align=center width=250px>
             <tr>
                 <td align=center width=150px>
-                    <center>
-                        <span style="font-size:24px"><a href='TBD'>[Paper]</a></span>
-                    </center>
+                    <div style="text-align: center;">
+                        <span style="font-size:24px"><a href='https://arxiv.org/abs/2203.11160'>[Paper]</a></span>
+                    </div>
                 </td>
                 <td align=center width=150px>
-                    <center>
+                    <div style="text-align: center;">
                         <span style="font-size:24px"><a
                                 href='https://github.com/vobecant/DriveAndSegment' target="_blank" rel="noopener noreferrer">[GitHub]</a></span><br>
-                    </center>
+                    </div>
                 </td>
                 <td align=center width=150px>
-                    <center>
+                    <div style="text-align: center;">
                         <span style="font-size:24px"><a
                                 href='https://huggingface.co/spaces/vobecant/DaS' target="_blank" rel="noopener noreferrer">[Gradio]</a></span><br>
                         <!--                        <span style="font-size:24px">[Videos]</span><br>-->
-                    </center>
+                    </div>
                 </td>
                 <td align=center width=150px>
-                    <center>
+                    <div style="text-align: center;">
                         <span style="font-size:24px"><a
                                 href='https://colab.research.google.com/drive/126tBVYbt1s0STyv8DKhmLoHKpvWcv33H?usp=sharing' target="_blank" rel="noopener noreferrer">[Colab]</a></span><br>
                         <!--                        <span style="font-size:24px">[Videos]</span><br>-->
-                    </center>
+                    </div>
                 </td>
                 <td align=center width=150px>
-                    <center>
+                    <div style="text-align: center;">
                         <span style="font-size:24px"><a
                                 href='https://www.youtube.com/embed/B9LK-Fxu7ao' target="_blank" rel="noopener noreferrer">[Video]</a></span><br>
                         <!--                        <span style="font-size:24px">[Videos]</span><br>-->
-                    </center>
+                    </div>
                 </td>
+
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2203.11160" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                            <!-- Code Link. -->
+                            <span class="link-block">
+                  <a href="https://github.com/vobecant/DriveAndSegment"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+
             </tr>
         </table>
         <br>
     </table>
 </center>
+
 
 <center>
     <table align=center width=850px>
@@ -402,12 +440,12 @@ We show the generalization capabilities of our method by testing on four differe
 <table align=center width=650px>
     <center><h1>Paper and Supplementary Material</h1></center>
     <tr>
-        <td><a href="TBD"><img class="layered-paper-big" style="height:175px"
+        <td><a href="https://arxiv.org/abs/2203.11160"><img class="layered-paper-big" style="height:175px"
                                                             src="./sources/paper.png"/></a></td>
         <td><span style="font-size:14pt">A. Vobecky, D. Hurych, O. Siméoni, S. Gydaris, A. Bursuc, P. Pérez, and J. Sivic.<br>
 				<b>Drive&Segment: Unsupervised Semantic Segmentation of Urban Scenes via Cross-modal Distillation</b><br>
                 ArXiv preprint, 2022.<br>
-				(hosted on <a href="TBD">ArXiv</a>)<br>
+				(hosted on <a href="https://arxiv.org/abs/2203.11160">ArXiv</a>)<br>
             <!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
 				<span style="font-size:4pt"><a href=""><br></a></span>
 				</span>
@@ -419,12 +457,11 @@ We show the generalization capabilities of our method by testing on four differe
 <table align=center width=600px>
     <tr>
 <pre><tt>
-@article{XY,
-  title     =  {},
-  author    =  {},
-  booktitle =  {arXiv preprint},
-  year      =  {2022}
-}
+@article{vobecky2022drivesegment,
+  title={Drive&Segment: Unsupervised Semantic Segmentation of Urban Scenes via Cross-modal Distillation},
+  author={Antonin Vobecky and David Hurych and Oriane Siméoni and Spyros Gidaris and Andrei Bursuc and Patrick Pérez and Josef Sivic},
+  journal={arXiv preprint arXiv:2203.11160},
+  year={2022}
 }</tt></pre>
     </tr>
 </table>
