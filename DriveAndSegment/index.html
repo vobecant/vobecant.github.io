@@ -280,26 +280,6 @@
                     </div>
                 </td>
 
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2203.11160" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                  </a>
-                </span>
-                            <!-- Code Link. -->
-                            <span class="link-block">
-                  <a href="https://github.com/vobecant/DriveAndSegment"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-
             </tr>
         </table>
         <br>
@@ -307,7 +287,21 @@
 </center>
 
 
-<center>
+<hr>
+
+<table align=center width=850px>
+    <center><h1>Abstract</h1></center>
+    <tr>
+        <td>
+This work investigates learning pixel-wise semantic image segmentation in urban scenes without any manual annotation, just from the raw non-curated data collected by cars which, equipped with cameras and LiDAR sensors, drive around a city. Our contributions are threefold. First, we propose a novel method for cross-modal unsupervised learning of semantic image segmentation by leveraging synchronized LiDAR and image data. The key ingredient of our method is the use of an object proposal module that analyzes the LiDAR point cloud to obtain proposals for spatially consistent objects. Second, we show that these 3D object proposals can be aligned with the input images and reliably clustered into semantically meaningful pseudo-classes. Finally, we develop a cross-modal distillation approach that leverages image data partially annotated with the resulting pseudo-classes to train a transformer-based model for image semantic segmentation.
+We show the generalization capabilities of our method by testing on four different testing datasets (Cityscapes, Dark Zurich, Nighttime Driving and ACDC) without any finetuning, and demonstrate significant improvements compared to the current state of the art on this problem.
+        </td>
+    </tr>
+</table>
+
+<br><br>
+
+<div style="text-align: center;">
     <table align=center width=850px>
         <tr>
             <td width=850px>
@@ -327,34 +321,21 @@ scenes with many objects, including thin structures such as <span style="color:#
             </td>
         </tr>
     </table>
-</center>
-
-
-<hr>
-
-<table align=center width=850px>
-    <center><h1>Abstract</h1></center>
-    <tr>
-        <td>
-This work investigates learning pixel-wise semantic image segmentation in urban scenes without any manual annotation, just from the raw non-curated data collected by cars which, equipped with cameras and LiDAR sensors, drive around a city. Our contributions are threefold. First, we propose a novel method for cross-modal unsupervised learning of semantic image segmentation by leveraging synchronized LiDAR and image data. The key ingredient of our method is the use of an object proposal module that analyzes the LiDAR point cloud to obtain proposals for spatially consistent objects. Second, we show that these 3D object proposals can be aligned with the input images and reliably clustered into semantically meaningful pseudo-classes. Finally, we develop a cross-modal distillation approach that leverages image data partially annotated with the resulting pseudo-classes to train a transformer-based model for image semantic segmentation.
-We show the generalization capabilities of our method by testing on four different testing datasets (Cityscapes, Dark Zurich, Nighttime Driving and ACDC) without any finetuning, and demonstrate significant improvements compared to the current state of the art on this problem.
-        </td>
-    </tr>
-</table>
+</div>
 
 <br><br>
 <hr>
-<center>
+<div style="text-align: center;">
     <table align=center width=900px>
-        <center><h1>Qualitative Results</h1></center>
+        <div style="text-align: center;"><h1>Qualitative Results</h1></div>
         <tr>
             <td width=850px>
-                <center>
+                <div style="text-align: center;">
                     <img class="round" style="width:500px" src="./sources/video128_blend03_v2_10fps_640px_lanczos.gif"/>
-                    <br>
+                    <br><br>
                     <img class="round" style="width:400px" src="./sources/video_stuttgart00_remap_blended03_20fps_crop.gif"/>
                     <img class="round" style="width:400px" src="./sources/video_stuttgart01_remap_blended03_20fps_crop2.gif"/>
-                </center>
+                </div>
             </td>
         </tr>
     </table>
@@ -367,17 +348,17 @@ We show the generalization capabilities of our method by testing on four differe
             </td>
         </tr>
     </table>
-</center>
+</div>
 
 <br><br>
 
 <hr>
-<center><h1>Explanatory video</h1></center>
+<div style="text-align: center;"><h1>Explanatory video</h1></div>
 <table align=center width=800px>
     <tr>
-        <center>
+        <div style="text-align: center;">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/B9LK-Fxu7ao" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </center>
+        </div>
     </tr>
 </table>
 
@@ -385,7 +366,7 @@ We show the generalization capabilities of our method by testing on four differe
 
 <hr>
 
-<center><h1>Code</h1></center>
+<div style="text-align: center;"><h1>Code</h1></div>
 
 
 <table align=center width=800px>
@@ -398,24 +379,24 @@ We show the generalization capabilities of our method by testing on four differe
                 For the Gradio application below, please use some of your examples. There is currently a bug on the Gradio side that prevents from using examples. Thank you.
             <br><br>
              <td align=center width=150px>
-                    <center>
+                    <div style="text-align: center;">
                         <span style="font-size:24px"><a
                                 href='https://github.com/vobecant/DriveAndSegment' target="_blank" rel="noopener noreferrer">[GitHub]</a></span><br>
-                    </center>
+                    </div>
                 </td>
                 <td align=center width=150px>
-                    <center>
+                    <div style="text-align: center;">
                         <span style="font-size:24px"><a
                                 href='https://huggingface.co/spaces/vobecant/DaS' target="_blank" rel="noopener noreferrer">[Gradio]</a></span><br>
                         <!--                        <span style="font-size:24px">[Videos]</span><br>-->
-                    </center>
+                    </div>
                 </td>
                 <td align=center width=150px>
-                    <center>
+                    <div style="text-align: center;">
                         <span style="font-size:24px"><a
                                 href='https://colab.research.google.com/drive/126tBVYbt1s0STyv8DKhmLoHKpvWcv33H?usp=sharing' target="_blank" rel="noopener noreferrer">[Colab]</a></span><br>
                         <!--                        <span style="font-size:24px">[Videos]</span><br>-->
-                    </center>
+                    </div>
                 </td>
 
 
@@ -438,7 +419,7 @@ We show the generalization capabilities of our method by testing on four differe
 
 
 <table align=center width=650px>
-    <center><h1>Paper and Supplementary Material</h1></center>
+    <div style="text-align: center;"><h1>Paper and Supplementary Material</h1></div>
     <tr>
         <td><a href="https://arxiv.org/abs/2203.11160"><img class="layered-paper-big" style="height:175px"
                                                             src="./sources/paper.png"/></a></td>
@@ -482,7 +463,7 @@ We show the generalization capabilities of our method by testing on four differe
     <tr>
         <td width=700px>
             <left>
-                <center><h1>Acknowledgements</h1></center>
+                <div style="text-align: center;"><h1>Acknowledgements</h1></div>
                 This work was partly supported by the European Regional Development Fund under the project IMPACT (reg. no. CZ.02.1.01/0.0/0.0/15_003/0000468), and the Ministry of Education, Youth and Sports of the Czech Republic through the e-INFRA CZ (ID:90140). Antonin Vobecky was supported by CTU Student Grant Agency (reg. no. SGS21/184/OHK3/3T/37).
             </left>
         </td>
