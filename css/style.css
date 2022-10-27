@@ -106,4 +106,38 @@ div.row h3 {
     float: none;
 }
 
+.profile-pic-cont {
+  float: right;
+  padding-top: 70px
+}
+
+.profile-pic {
+  width: 100%;
+  max-width:400px;
+}
+
+@media (max-width: 767px) {
+  .profile-pic-cont {
+    width: 100%;
+    margin-bottom: 30px;
+    padding-top: 30px;
+  }
+
+  .profile-pic {
+    max-width: 250px;
+  }
+
+  h3custom {
+    display: block;
+    text-align: center;
+  }
+
+  .title-name {
+    text-align: center;
+  }
+
+  .pub-text {
+    margin-bottom: 20px;
+  }
+}
 
