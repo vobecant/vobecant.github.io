@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="CLIP meets GamePhysics: Towards bug identification in gameplay videos using zero-shot transfer learning">
+    <meta name="keywords" content="CLIP, GamePhysics, Zero-Shot Transfer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CLIP meets GamePhysics: Towards bug identification in gameplay videos using zero-shot transfer
+        learning</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1P8DXFXFKM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-1P8DXFXFKM');
+    </script>
+    <link rel="stylesheet" href="https://gradio.s3-us-west-2.amazonaws.com/2.6.2/static/bundle.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/favicon.svg">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C2VYDTHPJZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C2VYDTHPJZ');
+</script>
+
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    </div>
+</nav>
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title">CLIP meets GamePhysics: Towards bug identification in
+                        gameplay
+                        videos using zero-shot transfer learning</h1>
+                    <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://taesiri.com">Mohammad Reza Taesiri</a><sup>1</sup>,</span>
+                        <span class="author-block">
+                <a href="https://asgaard.ece.ualberta.ca/">Finlay Macklon</a><sup>1</sup>,</span>
+                        <span class="author-block">
+                <a href="https://asgaard.ece.ualberta.ca/">Cor-Paul Bezemer</a><sup>1</sup>,
+              </span>
+                    </div>
+
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block"><sup>1</sup>University of Alberta,</span>
+                    </div>
+
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <!-- PDF Link. -->
+                            <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2203.11096.pdf"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                            <span class="link-block">
+                  <a href="https://arxiv.org/abs/2203.11096" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                            <!-- Code Link. -->
+                            <span class="link-block">
+                  <a href="https://github.com/asgaardlab/CLIPxGamePhysics"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        This work investigates learning pixel-wise semantic image segmentation in urban scenes without
+                        any manual annotation, just from the raw non-curated data collected by cars which, equipped with
+                        cameras and LiDAR sensors, drive around a city. Our contributions are threefold. First, we
+                        propose a novel method for cross-modal unsupervised learning of semantic image segmentation by
+                        leveraging synchronized LiDAR and image data. The key ingredient of our method is the use of an
+                        object proposal module that analyzes the LiDAR point cloud to obtain proposals for spatially
+                        consistent objects. Second, we show that these 3D object proposals can be aligned with the input
+                        images and reliably clustered into semantically meaningful pseudo-classes. Finally, we develop a
+                        cross-modal distillation approach that leverages image data partially annotated with the
+                        resulting pseudo-classes to train a transformer-based model for image semantic segmentation.
+                        We show the generalization capabilities of our method by testing on four different testing
+                        datasets (Cityscapes, Dark Zurich, Nighttime Driving and ACDC) without any finetuning, and
+                        demonstrate significant improvements compared to the current state of the art on this problem.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Sample Outputs</h2>
+            </div>
+        </div>
+        <div class="columns is-centered">
+
+            <!-- Horse on the air -->
+            <div class="column">
+                <div class="content">
+                    <h2 class="title is-3">A horse in the air</h2>
+                    <p>
+                        <a href="https://www.reddit.com/r/GamePhysics/comments/9rqabp/red_dead_redemption_2_things_you_find_in_rdr2/"
+                           target="_blank">Video <i class="fas fa-external-link-alt"></i></a>
+                        identified by our approach with the bug query '<i>A horse in the air</i>' form Red Dead
+                        Redemption 2.
+                    </p>
+                    <video id="dollyzoom" autoplay="" controls="" muted="" loop="" height="100%">
+                        <source src="https://asgaardlab.github.io/CLIPxGamePhysics/static/videos/9rqabp.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <!--/ Horse on the air -->
+
+            <!-- A person stuck in a barrel -->
+            <div class="column">
+                <div class="content">
+                    <h2 class="title is-3">A person stuck in a barrel</h2>
+                    <p>
+                        <a href="https://www.reddit.com/r/GamePhysics/comments/g5pm35/skyrim_a_fabulous_death/"
+                           target="_blank">Video <i class="fas fa-external-link-alt"></i></a> of '<i>A
+                        person stuck in a barrel</i>' from The Elder Scrolls V: Skyrim.
+                    </p>
+                    <video id="dollyzoom" autoplay="" controls="" muted="" loop="" height="100%">
+                        <source src="https://asgaardlab.github.io/CLIPxGamePhysics/static/videos/g5pm35.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <!--/ A person stuck in a barrel -->
+
+
+        </div>
+        <div class="columns is-centered">
+            <!-- A car in a vertical position -->
+            <div class="column">
+                <div class="content">
+                    <h2 class="title is-3">A car in a vertical position</h2>
+                    <p>
+                        <a href="https://www.reddit.com/r/GamePhysics/comments/6xplqg/grand_theft_auto_v_allllrighty_then/"
+                           target="_blank">Video <i class="fas fa-external-link-alt"></i></a>
+                        identified by our approach with the bug query '<i>A car in a vertical position</i>' form Grand
+                        Theft Auto
+                        V.
+                    </p>
+                    <video id="dollyzoom" autoplay="" controls="" muted="" loop="" height="100%">
+                        <source src="https://asgaardlab.github.io/CLIPxGamePhysics/static/videos/6xplqg.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <!--/ A car in a vertical position -->
+
+            <!-- A car stuck in a tree -->
+            <div class="column">
+                <div class="content">
+                    <h2 class="title is-3">A car stuck in a tree</h2>
+                    <p>
+                        <a href="https://www.reddit.com/r/GamePhysics/comments/4jirzj/gtav_tree_car/" target="_blank">Video
+                            <i class="fas fa-external-link-alt"></i></a> identified by our approach with the bug query
+                        of '<i>A car
+                        stuck in a tree</i>' from Grand Theft Auto V.
+                    </p>
+                    <video id="dollyzoom" autoplay="" controls="" muted="" loop="" height="100%">
+                        <source src="https://asgaardlab.github.io/CLIPxGamePhysics/static/videos/4jirzj.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <!--/ A car stuck in a tree -->
+        </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Demo. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Live Demo</h2>
+                <p> If the Huggingface demo below is not loading properly for you, please visit this <a
+                        href="https://huggingface.co/spaces/vobecant/DaS" target="_blank">link
+                    <i class="fas fa-external-link-alt"></i></a>. </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div id="target"></div>
+    <script src="https://gradio.s3-us-west-2.amazonaws.com/2.6.2/static/bundle.js"></script>
+    <script>
+        launchGradioFromSpaces("vobecant/DaS", "#target")
+    </script>
+</section>
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <div style="text-align: center;"><h1>Paper and Supplementary Material</h1></div>
+        <tr>
+            <td><a href="https://arxiv.org/abs/2203.11160"><img class="layered-paper-big" style="height:175px"
+                                                                src="./sources/paper.png"/></a></td>
+            <td><span style="font-size:14pt">A. Vobecky, D. Hurych, O. Siméoni, S. Gydaris, A. Bursuc, P. Pérez, and J. Sivic.<br>
+				<b>Drive&Segment: Unsupervised Semantic Segmentation of Urban Scenes via Cross-modal Distillation</b><br>
+                ECCV 2022, oral presentation.<br>
+				(hosted on <a href="TBD">ArXiv</a>)<br>
+                <!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
+				<span style="font-size:4pt"><a href=""><br></a></span>
+				</span>
+            </td>
+        </tr>
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@inproceedings{vobecky2022drive,
+  title={Drive\&segment: Unsupervised semantic segmentation of urban scenes via cross-modal distillation},
+  author={Vobecky, Antonin and Hurych, David and Sim{\'e}oni, Oriane and Gidaris, Spyros and Bursuc, Andrei and P{\'e}rez, Patrick and Sivic, Josef},
+  booktitle={Computer Vision--ECCV 2022: 17th European Conference, Tel Aviv, Israel, October 23--27, 2022, Proceedings, Part XXXVIII},
+  pages={478--495},
+  year={2022},
+  organization={Springer}
+}</code></pre>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>
+                        This website is forked from the <a href="https://asgaardlab.github.io/CLIPxGamePhysics/">source
+                        code</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>
