@@ -142,7 +142,7 @@ segmentation and retrieval of free-form language queries"/>
 
                             <!-- arXiv Link. -->
                             <span class="link-block">
-                  <a href="https://data.ciirc.cvut.cz/public/projects/2022DriveAndSegment/DriveAndSegment__Unsupervised_Semantic_Segmentation_of_Urban_Scenes_via_Cross-modal_Distillation.pdf" target="_blank" rel="noopener noreferrer"
+                  <a href="" target="_blank" rel="noopener noreferrer"
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fa fa-file-pdf"></i>
@@ -153,7 +153,7 @@ segmentation and retrieval of free-form language queries"/>
 
                             <!-- arXiv Link. -->
                             <span class="link-block">
-                  <a href="https://arxiv.org/abs/2203.11160" target="_blank" rel="noopener noreferrer"
+                  <a href="" target="_blank" rel="noopener noreferrer"
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -237,7 +237,7 @@ segmentation and retrieval of free-form language queries"/>
             </div>
         </div>
         <div class="columns is-centered">
-            <img class="round" style="width:400px" src="./sources/overview_splitted2.svg"/>
+            <img class="round" style="width:850px" src="./sources/overview_splitted2.svg"/>
         </div>
 
         <div class="content has-text-justified">
@@ -265,24 +265,19 @@ with text representations.
                 <h2 class="title is-3">Sample Outputs</h2>
             </div>
         </div>
-        <div class="columns is-centered">
-
-            <img class="round" style="width:400px" src="./sources/video128_blend03_v2_10fps_640px_lanczos.gif"/>
-        </div>
         <br>
         <div class="columns is-centered">
-            <img class="round" style="width:400px" src="./sources/video_stuttgart00_remap_blended03_20fps_crop.gif"/>
-            <img class="round" style="width:400px" src="./sources/video_stuttgart01_remap_blended03_20fps_crop2.gif"/>
+            <img class="round" style="width:400px" src="./sources/qualitative.png"/>
 
         </div>
 
         <div class="content has-text-justified">
             <p>
-                <b>Qualitative results.</b>
-                <i>Top:</i> An example of pseudo segmentation, i.e., the output of our method where the classes are not
-                mapped to the target ground-truth classes.
-                <i>Bottom:</i> Two videos from the Cityscapes dataset. To get the pseudo -> ground-truth mapping, we
-                apply the Hungarian algorithm.
+                <b>Qualitative results of zero-shot 3D occupancy prediction.</b>
+                <i>Left</i>: six input surround-view images. <i>Right</i>: our
+prediction; training grid resolution 100×100×8 is upsampled to 300×300×24 by interpolating the
+trained representation space. It is worth noting that the model successfully segments even the class
+bus, despite its limited occurrence in the training set.
             </p>
         </div>
 
