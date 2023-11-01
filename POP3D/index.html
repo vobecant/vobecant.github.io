@@ -239,12 +239,12 @@ segmentation and retrieval of free-form language queries"/>
         <div class="content has-text-justified">
             <p>
                 <b>Proposed approach.</b>
-                In <i>(a)</i>, we show the architecture of the proposed method. Having
+                In <b>(a)</b>, we show the architecture of the proposed method. Having
 only surround-view images on the input, the model first extracts dense voxel feature grid that is then
-fed to two parallel heads: occupancy head g producing voxel-level occupancy predictions, and to
-3D-language feature head h which outputs features aligned with text representations. In <i>(b)</i>, we show
-how we train our approach, namely the occupancy loss $L_{occ}$ used to train class-agnostic occupancy
-predictions, and the feature loss $L_{ft}$ that enforces the 3D-language head h to output features aligned
+fed to two parallel heads: occupancy head <i>g</i> producing voxel-level occupancy predictions, and to
+3D-language feature head <i>h</i> which outputs features aligned with text representations. In <b>(b)</b>, we show
+how we train our approach, namely the occupancy loss $\mathcal{L}_\text{occ}$ used to train class-agnostic occupancy
+predictions, and the feature loss $\mathcal{L}_\text{ft}$ that enforces the 3D-language head <i>h</i> to output features aligned
 with text representations.
             </p>
         </div>
