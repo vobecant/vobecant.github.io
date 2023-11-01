@@ -1,0 +1,7 @@
+@article{vobecky2023POP3D,
+  title={{POP}-3D: Open-Vocabulary 3D Occupancy Prediction from Images},
+  author={Antonin Vobecky and Oriane Siméoni and David Hurych and Spyros Gidaris and Andrei Bursuc and Patrick Pérez and Josef Sivic},
+ booktitle = {Advances in Neural Information Processing Systems},
+ volume = {36},
+ year = {2023}
+}
