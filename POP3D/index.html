@@ -194,10 +194,9 @@ segmentation and retrieval of free-form language queries"/>
 
 <section class="section">
     <div class="container is-max-desktop">
-        <!-- Abstract. -->
         <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
-                <h2 class="title is-3">Abstract</h2>
+                <h2 class="title is-2">Abstract</h2>
                 <div class="content has-text-justified">
                     <p>
                         We describe an approach to predict open-vocabulary 3D semantic voxel occupancy map 
@@ -229,19 +228,16 @@ segmentation and retrieval of free-form language queries"/>
 
 <hr>
 
-<section class="Approach">
+<section class="section">
     <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
-                <h2 class="title is-3">Approach</h2>
-            </div>
-        </div>
-        <div class="columns is-centered">
-            <img class="round" style="width:800px" src="./sources/overview_splitted2.svg"/>
-        </div>
-
-        <div class="content has-text-justified">
-            <p>
+                <h2 class="title is-2">Approach</h2>
+                <div>
+                    <img class="round" style="width:800px" src="./sources/overview_splitted2.svg"/>
+                </div>
+                <div class="content has-text-justified">
+                    <p>
                 <b>Proposed approach.</b>
                 In <b>(a)</b>, we show the architecture of the proposed method. Having
 only surround-view images on the input, the model first extracts dense voxel feature grid that is then
@@ -250,9 +246,10 @@ fed to two parallel heads: occupancy head <i>g</i> producing voxel-level occupan
 how we train our approach, namely the occupancy loss \(\mathcal{L}_\text{occ}\) used to train class-agnostic occupancy
 predictions, and the feature loss \(\mathcal{L}_\text{ft}\) that enforces the 3D-language head <i>h</i> to output features aligned
 with text representations.
-            </p>
+                    </p>
+                </div>
+            </div>
         </div>
-
     </div>
 </section>
 		
@@ -293,12 +290,13 @@ bus, despite its limited occurrence in the training set.
                 <h2 class="title is-2">Explanatory video</h2>
             </div>
         </div>
-        <div class="columns is-centered">
+	    To be added.
+<!--         <div class="columns is-centered">
             <iframe width="700" height="394" src="TBD"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-        </div>
+        </div> -->
     </div>
 </section>
 
