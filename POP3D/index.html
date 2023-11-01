@@ -23,11 +23,11 @@
 <head>
     <meta charset="utf-8">
     <meta property="og:title"
-          content="Drive&Segment: Unsupervised Semantic Segmentation of Urban Scenes via Cross-modal Distillation"/>
-    <meta property="og:description" content="Drive&Segment is a novel method for cross-modal unsupervised learning of semantic image segmentation
-    by leveraging synchronized LiDAR and image data"/>
+          content="{POP}-3D: Open-Vocabulary 3D Occupancy Prediction from Images"/>
+    <meta property="og:description" content="POP3D is a novel method for open-vocabulary 3D semantic voxel occupancy map from input 2D images with the objective of enabling 3D grounding,
+segmentation and retrieval of free-form language queries"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Drive&Segment page</title>
+    <title>POP3D page</title>
 
     <script>
         function CopyToClipboard(id) {
@@ -97,8 +97,7 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered">
                 <div class="column has-text-centered">
-                    <h1 class="title is-1 publication-title">Drive&Segment: Unsupervised Semantic Segmentation of Urban
-                        Scenes via<br> Cross-modal Distillation</h1>
+                    <h1 class="title is-1 publication-title">{POP}-3D<br>Open-Vocabulary 3D Occupancy Prediction from Images</h1>
                     <div class="is-size-5 publication-authors">
                 <div class="column has-text-centered">
                     <h1 class="title is-3 publication-title">ECCV 2022, oral presentation</h1>
@@ -160,7 +159,7 @@
                 </span>
                             <!-- Code Link. -->
                             <span class="link-block">
-                  <a href="https://github.com/vobecant/DriveAndSegment" target="_blank" rel="noopener noreferrer"
+                  <a href="https://github.com/vobecant/POP3D" target="_blank" rel="noopener noreferrer"
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -169,32 +168,9 @@
                   </a>
                 </span>
 
-                            <!-- Code Link. -->
-                            <span class="link-block">
-                  <a href="https://huggingface.co/spaces/vobecant/DaS" target="_blank" rel="noopener noreferrer"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fa fa-gamepad"></i>
-                    </span>
-                    <span>Gradio</span>
-                  </a>
-                </span>
-
-                            <!-- Code Link. -->
-                            <span class="link-block">
-                  <a href="https://colab.research.google.com/drive/126tBVYbt1s0STyv8DKhmLoHKpvWcv33H?usp=sharing"
-                     target="_blank" rel="noopener noreferrer"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-google"></i>
-                    </span>
-                    <span>Colab</span>
-                  </a>
-                </span>
-
                             <!-- Video Link. -->
                             <span class="link-block">
-                  <a href="https://www.youtube.com/watch?v=B9LK-Fxu7ao" target="_blank" rel="noopener noreferrer"
+                  <a href="" target="_blank" rel="noopener noreferrer"
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -220,19 +196,23 @@
                 <h2 class="title is-3">Abstract</h2>
                 <div class="content has-text-justified">
                     <p>
-                        This work investigates learning pixel-wise semantic image segmentation in urban scenes without
-                        any manual annotation, just from the raw non-curated data collected by cars which, equipped with
-                        cameras and LiDAR sensors, drive around a city. Our contributions are threefold. First, we
-                        propose a novel method for cross-modal unsupervised learning of semantic image segmentation by
-                        leveraging synchronized LiDAR and image data. The key ingredient of our method is the use of an
-                        object proposal module that analyzes the LiDAR point cloud to obtain proposals for spatially
-                        consistent objects. Second, we show that these 3D object proposals can be aligned with the input
-                        images and reliably clustered into semantically meaningful pseudo-classes. Finally, we develop a
-                        cross-modal distillation approach that leverages image data partially annotated with the
-                        resulting pseudo-classes to train a transformer-based model for image semantic segmentation.
-                        We show the generalization capabilities of our method by testing on four different testing
-                        datasets (Cityscapes, Dark Zurich, Nighttime Driving and ACDC) without any finetuning, and
-                        demonstrate significant improvements compared to the current state of the art on this problem.
+                        We describe an approach to predict open-vocabulary 3D semantic voxel occupancy map 
+			    from input 2D images with the objective of enabling 3D grounding,
+	segmentation and retrieval of free-form language queries. This is a challenging
+	problem because of the 2D-3D ambiguity and the open-vocabulary nature of the
+	target tasks, where obtaining annotated training data in 3D is difficult. The con-
+	tributions of this work are three-fold. First, we design a new model architecture
+	for open-vocabulary 3D semantic occupancy prediction. The architecture consists
+	of a 2D-3D encoder together with occupancy prediction and 3D-language heads.
+	The output is a dense voxel map of 3D grounded language embeddings enabling a
+	range of open-vocabulary tasks. Second, we develop a tri-modal self-supervised
+	learning algorithm that leverages three modalities: (i) images, (ii) language and (iii)
+	LiDAR point clouds, and enables training the proposed architecture using a strong
+	pre-trained vision-language model without the need for any 3D manual language
+	annotations. Finally, we demonstrate quantitatively the strengths of the proposed
+	model on several open-vocabulary tasks: Zero-shot 3D semantic segmentation
+	using existing datasets; 3D grounding and retrieval of free-form language queries,
+	using a small dataset that we propose as an extension of nuScenes.
                     </p>
                 </div>
                 <div>
@@ -380,11 +360,11 @@
             <a href="https://arxiv.org/abs/2203.11160" target="_blank" rel="noopener noreferrer"><img
                     class="layered-paper-big" style="height:175px"
                     src="./sources/paper.png"/></a>
-            <span style="font-size:14pt">A. Vobecky, D. Hurych, O. Siméoni, S. Gydaris, A. Bursuc, P. Pérez, and J. Sivic.<br>
-				<b>Drive&Segment: Unsupervised Semantic Segmentation of Urban Scenes<br> via Cross-modal Distillation</b><br>
-                ArXiv preprint, 2022.<br>
-				(hosted on <a href="https://arxiv.org/abs/2203.11160" target="_blank"
-                              rel="noopener noreferrer">ArXiv</a>, <a href="https://data.ciirc.cvut.cz/public/projects/2022DriveAndSegment/DriveAndSegment__Unsupervised_Semantic_Segmentation_of_Urban_Scenes_via_Cross-modal_Distillation.pdf">full PDF</a>)<br>
+            <span style="font-size:14pt">A. Vobecky, O. Siméoni, D. Hurych, S. Gydaris, A. Bursuc, P. Pérez, and J. Sivic.<br>
+				<b>{POP}-3D: Open-Vocabulary 3D Occupancy Prediction from Images</b><br>
+                NeurIPS, 2023.<br>
+				(hosted on <a href="" target="_blank"
+                              rel="noopener noreferrer">ArXiv</a>, <a href="">full PDF</a>)<br>
 				</span>
         </div>
 
@@ -394,11 +374,12 @@
                     class="icon"><i class="fa fa-copy"></i></span></a></h2>
         </div>
         <div class="columns is-centered">
-        <pre><code id="bibtex">@article{vobecky2022drivesegment,
-  title={Drive&Segment: Unsupervised Semantic Segmentation of Urban Scenes via Cross-modal Distillation},
-  author={Antonin Vobecky and David Hurych and Oriane Siméoni and Spyros Gidaris and Andrei Bursuc and Patrick Pérez and Josef Sivic},
-  journal={arXiv preprint arXiv:2203.11160},
-  year={2022}
+        <pre><code id="bibtex">@article{vobecky2023POP3D,
+  title={{POP}-3D: Open-Vocabulary 3D Occupancy Prediction from Images},
+  author={Antonin Vobecky and Oriane Siméoni and David Hurych and Spyros Gidaris and Andrei Bursuc and Patrick Pérez and Josef Sivic},
+ booktitle = {Advances in Neural Information Processing Systems},
+ volume = {36},
+ year = {2023}
 }</code></pre>
         </div>
     </div>
