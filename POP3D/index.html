@@ -40,6 +40,10 @@ segmentation and retrieval of free-form language queries"/>
         }
     </script>
 
+    <script type="text/javascript" id="MathJax-script" async
+	src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1P8DXFXFKM"></script>
     <script>
@@ -243,8 +247,8 @@ segmentation and retrieval of free-form language queries"/>
 only surround-view images on the input, the model first extracts dense voxel feature grid that is then
 fed to two parallel heads: occupancy head <i>g</i> producing voxel-level occupancy predictions, and to
 3D-language feature head <i>h</i> which outputs features aligned with text representations. In <b>(b)</b>, we show
-how we train our approach, namely the occupancy loss $\mathcal{L}_\text{occ}$ used to train class-agnostic occupancy
-predictions, and the feature loss $\mathcal{L}_\text{ft}$ that enforces the 3D-language head <i>h</i> to output features aligned
+how we train our approach, namely the occupancy loss \(\mathcal{L}_\text{occ}\) used to train class-agnostic occupancy
+predictions, and the feature loss \(\mathcal{L}_\text{ft}\) that enforces the 3D-language head <i>h</i> to output features aligned
 with text representations.
             </p>
         </div>
