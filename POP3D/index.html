@@ -2,10 +2,30 @@
 <html>
 
 <style type="text/css">
-
-
-    .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-        box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.35), /* The top layer shadow */ 5px 5px 0 0px #fff, /* The second layer */ 5px 5px 1px 1px rgba(0, 0, 0, 0.35), /* The second layer shadow */ 10px 10px 0 0px #fff, /* The third layer */ 10px 10px 1px 1px rgba(0, 0, 0, 0.35), /* The third layer shadow */ 15px 15px 0 0px #fff, /* The fourth layer */ 15px 15px 1px 1px rgba(0, 0, 0, 0.35), /* The fourth layer shadow */ 20px 20px 0 0px #fff, /* The fifth layer */ 20px 20px 1px 1px rgba(0, 0, 0, 0.35), /* The fifth layer shadow */ 25px 25px 0 0px #fff, /* The fifth layer */ 25px 25px 1px 1px rgba(0, 0, 0, 0.35); /* The fifth layer shadow */
+    .layered-paper-big {
+        /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+        box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.35),
+            /* The top layer shadow */
+            5px 5px 0 0px #fff,
+            /* The second layer */
+            5px 5px 1px 1px rgba(0, 0, 0, 0.35),
+            /* The second layer shadow */
+            10px 10px 0 0px #fff,
+            /* The third layer */
+            10px 10px 1px 1px rgba(0, 0, 0, 0.35),
+            /* The third layer shadow */
+            15px 15px 0 0px #fff,
+            /* The fourth layer */
+            15px 15px 1px 1px rgba(0, 0, 0, 0.35),
+            /* The fourth layer shadow */
+            20px 20px 0 0px #fff,
+            /* The fifth layer */
+            20px 20px 1px 1px rgba(0, 0, 0, 0.35),
+            /* The fifth layer shadow */
+            25px 25px 0 0px #fff,
+            /* The fifth layer */
+            25px 25px 1px 1px rgba(0, 0, 0, 0.35);
+        /* The fifth layer shadow */
         margin-left: 10px;
         margin-right: 45px;
     }
@@ -15,17 +35,14 @@
         height: 1px;
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
     }
-
-
 </style>
 
 
 <head>
     <meta charset="utf-8">
-    <meta property="og:title"
-          content="POP-3D: Open-Vocabulary 3D Occupancy Prediction from Images"/>
+    <meta property="og:title" content="POP-3D: Open-Vocabulary 3D Occupancy Prediction from Images" />
     <meta property="og:description" content="POP3D is a novel method for open-vocabulary 3D semantic voxel occupancy map from input 2D images with the objective of enabling 3D grounding,
-segmentation and retrieval of free-form language queries"/>
+segmentation and retrieval of free-form language queries" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>POP3D page</title>
 
@@ -41,8 +58,8 @@ segmentation and retrieval of free-form language queries"/>
     </script>
 
     <script type="text/javascript" id="MathJax-script" async
-	src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1P8DXFXFKM"></script>
@@ -78,343 +95,364 @@ segmentation and retrieval of free-form language queries"/>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-C2VYDTHPJZ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-C2VYDTHPJZ');
+    gtag('config', 'G-C2VYDTHPJZ');
 </script>
 
 <body>
-<nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-    </div>
-    </div>
-</nav>
-<section class="hero">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered">
-                <div class="column has-text-centered">
-                    <h1 class="title is-1 publication-title">POP-3D<br>Open-Vocabulary 3D Occupancy Prediction from Images</h1>
-                    <div class="is-size-5 publication-authors">
-                <div class="column has-text-centered">
-                    <h1 class="title is-3 publication-title">NeurIPS 2023</h1>
-                    <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <a href="https://vobecant.github.io" target="_blank"
-                   rel="noopener noreferrer">A. Vobecky</a><sup>1,2</sup>,</span>
-		<span class="author-block">
-                <a href="https://osimeoni.github.io/" target="_blank"
-                   rel="noopener noreferrer">O. Siméoni</a><sup>2</sup>,
-              </span>
-                        <span class="author-block">
-                <a href="https://scholar.google.com/citations?hl=en&user=XY1PVwYAAAAJ" target="_blank"
-                   rel="noopener noreferrer">D. Hurych</a><sup>2</sup>,</span>
-                        <span class="author-block">
-                <a href="https://scholar.google.fr/citations?user=7atfg7EAAAAJ&hl=en" target="_blank"
-                   rel="noopener noreferrer">S. Gydaris</a><sup>2</sup>,
-              </span>
-                        <span class="author-block">
-                <a href="https://abursuc.github.io/" target="_blank" rel="noopener noreferrer">A. Bursuc</a><sup>2</sup>,
-              </span>
-                        <span class="author-block">
-                <a href="https://ptrckprz.github.io/" target="_blank" rel="noopener noreferrer">P. Pérez</a><sup>2</sup>,
-              </span>
-                        <span class="author-block">
-                <a href="https://people.ciirc.cvut.cz/~sivic/" target="_blank"
-                   rel="noopener noreferrer">J. Sivic</a><sup>1</sup>
-              </span>
-                    </div>
-
-                    <div class="is-size-5 publication-authors">
-                        <span class="author-block"><sup>1</sup>CIIRC CTU,</span>
-                        <span class="author-block"><sup>2</sup>valeo.ai</span>
-                    </div>
-
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <div class="publication-links">
+                        <h1 class="title is-1 publication-title">POP-3D<br>Open-Vocabulary 3D Occupancy Prediction from
+                            Images</h1>
+                        <div class="is-size-5 publication-authors">
+                            <div class="column has-text-centered">
+                                <h1 class="title is-3 publication-title">NeurIPS 2023</h1>
+                                <div class="is-size-5 publication-authors">
+                                    <span class="author-block">
+                                        <a href="https://vobecant.github.io" target="_blank"
+                                            rel="noopener noreferrer">A. Vobecky</a><sup>1,2</sup>,</span>
+                                    <span class="author-block">
+                                        <a href="https://osimeoni.github.io/" target="_blank"
+                                            rel="noopener noreferrer">O. Siméoni</a><sup>2</sup>,
+                                    </span>
+                                    <span class="author-block">
+                                        <a href="https://scholar.google.com/citations?hl=en&user=XY1PVwYAAAAJ"
+                                            target="_blank" rel="noopener noreferrer">D. Hurych</a><sup>2</sup>,</span>
+                                    <span class="author-block">
+                                        <a href="https://scholar.google.fr/citations?user=7atfg7EAAAAJ&hl=en"
+                                            target="_blank" rel="noopener noreferrer">S. Gydaris</a><sup>2</sup>,
+                                    </span>
+                                    <span class="author-block">
+                                        <a href="https://abursuc.github.io/" target="_blank"
+                                            rel="noopener noreferrer">A. Bursuc</a><sup>2</sup>,
+                                    </span>
+                                    <span class="author-block">
+                                        <a href="https://ptrckprz.github.io/" target="_blank"
+                                            rel="noopener noreferrer">P. Pérez</a><sup>2</sup>,
+                                    </span>
+                                    <span class="author-block">
+                                        <a href="https://people.ciirc.cvut.cz/~sivic/" target="_blank"
+                                            rel="noopener noreferrer">J. Sivic</a><sup>1</sup>
+                                    </span>
+                                </div>
 
-                            <!-- arXiv Link. -->
-                            <span class="link-block">
-                  <a href="" target="_blank" rel="noopener noreferrer"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fa fa-file-pdf"></i>
-                    </span>
-                    <span>paper</span>
-                  </a>
-                </span>
+                                <div class="is-size-5 publication-authors">
+                                    <span class="author-block"><sup>1</sup>CIIRC CTU,</span>
+                                    <span class="author-block"><sup>2</sup>valeo.ai</span>
+                                </div>
 
-                            <!-- arXiv Link. -->
-                            <span class="link-block">
-                  <a href="" target="_blank" rel="noopener noreferrer"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                  </a>
-                </span>
-                            <!-- Code Link. -->
-                            <span class="link-block">
-                  <a href="https://github.com/vobecant/POP3D" target="_blank" rel="noopener noreferrer"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
+                                <div class="column has-text-centered">
+                                    <div class="publication-links">
 
-                            <!-- Video Link. -->
-                            <span class="link-block">
-                  <a href="" target="_blank" rel="noopener noreferrer"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                    </span>
-                    <span>Video</span>
-                  </a>
-                </span>
+                                        <!-- arXiv Link. -->
+                                        <span class="link-block">
+                                            <a href="" target="_blank" rel="noopener noreferrer"
+                                                class="external-link button is-normal is-rounded is-dark">
+                                                <span class="icon">
+                                                    <i class="fa fa-file-pdf"></i>
+                                                </span>
+                                                <span>paper</span>
+                                            </a>
+                                        </span>
 
+                                        <!-- arXiv Link. -->
+                                        <span class="link-block">
+                                            <a href="" target="_blank" rel="noopener noreferrer"
+                                                class="external-link button is-normal is-rounded is-dark">
+                                                <span class="icon">
+                                                    <i class="ai ai-arxiv"></i>
+                                                </span>
+                                                <span>arXiv</span>
+                                            </a>
+                                        </span>
+                                        <!-- Code Link. -->
+                                        <span class="link-block">
+                                            <a href="https://github.com/vobecant/POP3D" target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="external-link button is-normal is-rounded is-dark">
+                                                <span class="icon">
+                                                    <i class="fab fa-github"></i>
+                                                </span>
+                                                <span>Code</span>
+                                            </a>
+                                        </span>
+
+                                        <!-- Video Link. -->
+                                        <span class="link-block">
+                                            <a href="" target="_blank" rel="noopener noreferrer"
+                                                class="external-link button is-normal is-rounded is-dark">
+                                                <span class="icon">
+                                                    <i class="fab fa-youtube"></i>
+                                                </span>
+                                                <span>Video</span>
+                                            </a>
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
 
-<section class="section">
-    <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-                <h2 class="title is-3">Abstract</h2>
-                <div class="content has-text-justified">
-                    <p>
-                        We describe an approach to predict open-vocabulary 3D semantic voxel occupancy map 
-			    from input 2D images with the objective of enabling 3D grounding,
-	segmentation and retrieval of free-form language queries. This is a challenging
-	problem because of the 2D-3D ambiguity and the open-vocabulary nature of the
-	target tasks, where obtaining annotated training data in 3D is difficult. The con-
-	tributions of this work are three-fold. First, we design a new model architecture
-	for open-vocabulary 3D semantic occupancy prediction. The architecture consists
-	of a 2D-3D encoder together with occupancy prediction and 3D-language heads.
-	The output is a dense voxel map of 3D grounded language embeddings enabling a
-	range of open-vocabulary tasks. Second, we develop a tri-modal self-supervised
-	learning algorithm that leverages three modalities: (i) images, (ii) language and (iii)
-	LiDAR point clouds, and enables training the proposed architecture using a strong
-	pre-trained vision-language model without the need for any 3D manual language
-	annotations. Finally, we demonstrate quantitatively the strengths of the proposed
-	model on several open-vocabulary tasks: Zero-shot 3D semantic segmentation
-	using existing datasets; 3D grounding and retrieval of free-form language queries,
-	using a small dataset that we propose as an extension of nuScenes.
-                    </p>
-                </div>
-                <div>
-                    <img class="round" style="width:850px" src="./sources/teaser_pop3d_star_borders.svg"/>
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            We describe an approach to predict open-vocabulary 3D semantic voxel occupancy map
+                            from input 2D images with the objective of enabling 3D grounding,
+                            segmentation and retrieval of free-form language queries. This is a challenging
+                            problem because of the 2D-3D ambiguity and the open-vocabulary nature of the
+                            target tasks, where obtaining annotated training data in 3D is difficult. The con-
+                            tributions of this work are three-fold. First, we design a new model architecture
+                            for open-vocabulary 3D semantic occupancy prediction. The architecture consists
+                            of a 2D-3D encoder together with occupancy prediction and 3D-language heads.
+                            The output is a dense voxel map of 3D grounded language embeddings enabling a
+                            range of open-vocabulary tasks. Second, we develop a tri-modal self-supervised
+                            learning algorithm that leverages three modalities: (i) images, (ii) language and (iii)
+                            LiDAR point clouds, and enables training the proposed architecture using a strong
+                            pre-trained vision-language model without the need for any 3D manual language
+                            annotations. Finally, we demonstrate quantitatively the strengths of the proposed
+                            model on several open-vocabulary tasks: Zero-shot 3D semantic segmentation
+                            using existing datasets; 3D grounding and retrieval of free-form language queries,
+                            using a small dataset that we propose as an extension of nuScenes.
+                        </p>
+                    </div>
+                    <div>
+                        <img class="round" style="width:850px" src="./sources/teaser_pop3d_star_borders.svg" />
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<hr>
+    <hr>
 
-<section class="section">
-    <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-                <h2 class="title is-3">Approach</h2>
-                <div>
-                    <img class="round" style="width:800px" src="./sources/overview_splitted2.svg"/>
-                </div>
-                <div class="content has-text-justified">
-                    <p>
-                <b>Proposed approach.</b>
-                In <b>(a)</b>, we show the architecture of the proposed method. Having
-only surround-view images on the input, the model first extracts dense voxel feature grid that is then
-fed to two parallel heads: occupancy head <i>g</i> producing voxel-level occupancy predictions, and to
-3D-language feature head <i>h</i> which outputs features aligned with text representations. In <b>(b)</b>, we show
-how we train our approach, namely the occupancy loss \(\mathcal{L}_\text{occ}\) used to train class-agnostic occupancy
-predictions, and the feature loss \(\mathcal{L}_\text{ft}\) that enforces the 3D-language head <i>h</i> to output features aligned
-with text representations.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-		
-<hr>
-	
-<section class="section">
-    <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-                <h2 class="title is-3">Sample Outputs</h2>
-                <div>
-                    <img class="round" style="width:800px" src="./sources/qualitative.png"/>
-                </div>
-                <div class="content has-text-justified">
-                    <p>
-                <b>Qualitative results of zero-shot 3D occupancy prediction.</b>
-                <i>Left</i>: six input surround-view images. <i>Right</i>: our
-prediction; training grid resolution 100×100×8 is upsampled to 300×300×24 by interpolating the
-trained representation space. It is worth noting that the model successfully segments even the class
-bus, despite its limited occurrence in the training set.
-                    </p>
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Approach</h2>
+                    <div>
+                        <img class="round" style="width:800px" src="./sources/overview_splitted2.svg" />
+                    </div>
+                    <div class="content has-text-justified">
+                        <p>
+                            <b>Proposed approach.</b>
+                            In <b>(a)</b>, we show the architecture of the proposed method. Having
+                            only surround-view images on the input, the model first extracts dense voxel feature grid
+                            that is then
+                            fed to two parallel heads: occupancy head <i>g</i> producing voxel-level occupancy
+                            predictions, and to
+                            3D-language feature head <i>h</i> which outputs features aligned with text representations.
+                            In <b>(b)</b>, we show
+                            how we train our approach, namely the occupancy loss \(\mathcal{L}_\text{occ}\) used to
+                            train class-agnostic occupancy
+                            predictions, and the feature loss \(\mathcal{L}_\text{ft}\) that enforces the 3D-language
+                            head <i>h</i> to output features aligned
+                            with text representations.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<hr>
+    <hr>
 
-<section class="section">
-    <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-                <h2 class="title is-3">Explanatory video</h2>
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Sample Outputs</h2>
+                    <div>
+                        <img class="round" style="width:800px" src="./sources/qualitative.png" />
+                    </div>
+                    <div class="content has-text-justified">
+                        <p>
+                            <b>Qualitative results of zero-shot 3D occupancy prediction.</b>
+                            <i>Left</i>: six input surround-view images. <i>Right</i>: our
+                            prediction; training grid resolution 100×100×8 is upsampled to 300×300×24 by interpolating
+                            the
+                            trained representation space. It is worth noting that the model successfully segments even
+                            the class
+                            bus, despite its limited occurrence in the training set.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-	    To be added.
-<!--         <div class="columns is-centered">
+    </section>
+
+    <hr>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Explanatory video</h2>
+                </div>
+            </div>
+            To be added.
+            <!--         <div class="columns is-centered">
             <iframe width="700" height="394" src="TBD"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
         </div> -->
-    </div>
-</section>
+        </div>
+    </section>
 
-<hr>
+    <hr>
 
-<section class="section">
-    <div class="container is-max-desktop">
-        <!-- Demo. -->
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-                <h2 class="title is-3">Code</h2>
-                <p> We provide the code for our method on GitHub.</p>
-                <!-- Code Link. -->
-                <span class="link-block">
-                  <a href="https://github.com/vobecant/DriveAndSegment" target="_blank" rel="noopener noreferrer"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Demo. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Code</h2>
+                    <p> We provide the code for our method on GitHub.</p>
+                    <!-- Code Link. -->
+                    <span class="link-block">
+                        <a href="https://github.com/vobecant/DriveAndSegment" target="_blank" rel="noopener noreferrer"
+                            class="external-link button is-normal is-rounded is-dark">
+                            <span class="icon">
+                                <i class="fab fa-github"></i>
+                            </span>
+                            <span>Code</span>
+                        </a>
                     </span>
-                    <span>Code</span>
-                  </a>
-                </span>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
-<section class="section">
-    <div class="container is-max-desktop">
-        <!-- Demo. -->
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-                <h3 class="title is-3">Retrieval Benchmark</h3>
-                <p> The details about our benchmark for open-vocabulary language-driven 3D retrieval can be found <a
-                        href="" target="_blank" rel="noopener noreferrer">here
-                    <i class="fas fa-external-link-alt"></i></a>. </p>
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Demo. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h3 class="title is-3">Retrieval Benchmark</h3>
+                    <p> The details about our benchmark for open-vocabulary language-driven 3D retrieval can be found <a
+                            href="" target="_blank" rel="noopener noreferrer">here
+                            <i class="fas fa-external-link-alt"></i></a>. </p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<hr>
+    <hr>
 
-<section class="section">
-    <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-                <h2 class="title is-3">Paper and Supplementary Material</h2>
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Paper and Supplementary Material</h2>
 
-        <br>
-        <div class="columns is-centered">
-            <a href="" target="_blank" rel="noopener noreferrer"><img
-                    class="layered-paper-big" style="height:175px"
-                    src="./sources/paper.png"/></a>
-            <span style="font-size:14pt">A. Vobecky, O. Siméoni, D. Hurych, S. Gydaris, A. Bursuc, P. Pérez, and J. Sivic.<br>
-				<b>POP-3D: Open-Vocabulary 3D Occupancy Prediction from Images</b><br>
-                NeurIPS, 2023.<br>
-				(hosted on <a href="" target="_blank" rel="noopener noreferrer">ArXiv</a>, 
-		    <a href="" target="_blank" rel="noopener noreferrer">full PDF</a>)<br>
-				</span>
-        </div>
+                    <br>
+                    <div class="columns is-centered">
+                        <a href="" target="_blank" rel="noopener noreferrer"><img class="layered-paper-big"
+                                style="height:175px" src="./sources/paper.png" /></a>
+                        <span style="font-size:14pt">A. Vobecky, O. Siméoni, D. Hurych, S. Gydaris, A. Bursuc, P. Pérez,
+                            and J. Sivic.<br>
+                            <b>POP-3D: Open-Vocabulary 3D Occupancy Prediction from Images</b><br>
+                            NeurIPS, 2023.<br>
+                            (hosted on <a href="" target="_blank" rel="noopener noreferrer">ArXiv</a>,
+                            <a href="" target="_blank" rel="noopener noreferrer">full PDF</a>)<br>
+                        </span>
+                    </div>
 
-        <br>
-        <div class="column is-four-fifths">
-            <h2 class="title is-3">BibTeX <a href="#" onclick="CopyToClipboard('bibtex');return false;"><span
-                    class="icon"><i class="fa fa-copy"></i></span></a></h2>
-        </div>
-        <div class="columns is-centered">
-        <pre><code id="bibtex">@article{vobecky2023POP3D,
+                    <br>
+                    <div class="column is-four-fifths">
+                        <h2 class="title is-3">BibTeX <a href="#"
+                                onclick="CopyToClipboard('bibtex');return false;"><span class="icon"><i
+                                        class="fa fa-copy"></i></span></a></h2>
+                    </div>
+
+                </div>
+                <div class="columns is-centered">
+                    <pre><code id="bibtex">@article{vobecky2023POP3D,
   title={POP-3D: Open-Vocabulary 3D Occupancy Prediction from Images},
   author={Antonin Vobecky and Oriane Siméoni and David Hurych and Spyros Gidaris and Andrei Bursuc and Patrick Pérez and Josef Sivic},
  booktitle = {Advances in Neural Information Processing Systems},
  volume = {36},
  year = {2023}
 }</code></pre>
-        </div>
-    </div>
-		
+                </div>
             </div>
-        </div>
-</section>
 
-<section class="section">
-    <div class="container is-max-desktop">
-        <!-- Ack. -->
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-                <h4 class="title is-3">Acknowledgements</h4>
-                <div class="content has-text-justified">
-                    <p>
-This work supported by the European Regional Development Fund under the project IMPACT (no.
-CZ.02.1.010.00.015_0030000468), by the Ministry of Education, Youth and Sports of the Czech Republic
-through the e-INFRA CZ (ID:90140), and by CTU Student Grant SGS21184OHK33T37. This research received
-the support of EXA4MIND, a European Union’s Horizon Europe Research and Innovation programme under
-grant agreement N° 101092944. Views and opinions expressed are however those of the author(s) only and do
-not necessarily reflect those of the European Union or the European Commission. Neither the European Union
-nor the granting authority can be held responsible for them. The authors have no competing interests to declare
-that are relevant to the content of this article. Antonin Vobecky acknowledges travel support from ELISE (GA
-no 951847).
-                    </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Ack. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h4 class="title is-3">Acknowledgements</h4>
+                    <div class="content has-text-justified">
+                        <p>
+                            This work supported by the European Regional Development Fund under the project IMPACT (no.
+                            CZ.02.1.010.00.015_0030000468), by the Ministry of Education, Youth and Sports of the Czech
+                            Republic
+                            through the e-INFRA CZ (ID:90140), and by CTU Student Grant SGS21184OHK33T37. This research
+                            received
+                            the support of EXA4MIND, a European Union’s Horizon Europe Research and Innovation programme
+                            under
+                            grant agreement N° 101092944. Views and opinions expressed are however those of the
+                            author(s) only and do
+                            not necessarily reflect those of the European Union or the European Commission. Neither the
+                            European Union
+                            nor the granting authority can be held responsible for them. The authors have no competing
+                            interests to declare
+                            that are relevant to the content of this article. Antonin Vobecky acknowledges travel
+                            support from ELISE (GA
+                            no 951847).
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer class="footer">
-    <div class="container">
-        <div class="columns is-centered">
-            <div class="column is-8">
-                <div class="content">
-                    <p>
-                        This website is forked from source of <a href="https://asgaardlab.github.io/CLIPxGamePhysics/"
-                                                                 target="_blank" rel="noopener noreferrer">
-                        this page</a>.
-                    </p>
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This website is forked from source of <a
+                                href="https://asgaardlab.github.io/CLIPxGamePhysics/" target="_blank"
+                                rel="noopener noreferrer">
+                                this page</a>.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 </body>
 
