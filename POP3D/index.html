@@ -23,7 +23,7 @@
 <head>
     <meta charset="utf-8">
     <meta property="og:title"
-          content="{POP}-3D: Open-Vocabulary 3D Occupancy Prediction from Images"/>
+          content="POP-3D: Open-Vocabulary 3D Occupancy Prediction from Images"/>
     <meta property="og:description" content="POP3D is a novel method for open-vocabulary 3D semantic voxel occupancy map from input 2D images with the objective of enabling 3D grounding,
 segmentation and retrieval of free-form language queries"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -97,7 +97,7 @@ segmentation and retrieval of free-form language queries"/>
         <div class="container is-max-desktop">
             <div class="columns is-centered">
                 <div class="column has-text-centered">
-                    <h1 class="title is-1 publication-title">{POP}-3D<br>Open-Vocabulary 3D Occupancy Prediction from Images</h1>
+                    <h1 class="title is-1 publication-title">POP-3D<br>Open-Vocabulary 3D Occupancy Prediction from Images</h1>
                     <div class="is-size-5 publication-authors">
                 <div class="column has-text-centered">
                     <h1 class="title is-3 publication-title">NeurIPS 2023</h1>
@@ -225,6 +225,33 @@ segmentation and retrieval of free-form language queries"/>
 
 <hr>
 
+<section class="Approach">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Approach</h2>
+            </div>
+        </div>
+        <div class="columns is-centered">
+            <img class="round" style="width:400px" src="./sources/overview_splitted2.svg"/>
+        </div>
+
+        <div class="content has-text-justified">
+            <p>
+                <b>Proposed approach.</b>
+                In <i>(a)</i>, we show the architecture of the proposed method. Having
+only surround-view images on the input, the model first extracts dense voxel feature grid that is then
+fed to two parallel heads: occupancy head g producing voxel-level occupancy predictions, and to
+3D-language feature head h which outputs features aligned with text representations. In <i>(b)</i>, we show
+how we train our approach, namely the occupancy loss $L_{occ}$ used to train class-agnostic occupancy
+predictions, and the feature loss $L_{ft}$ that enforces the 3D-language head h to output features aligned
+with text representations.
+            </p>
+        </div>
+
+    </div>
+</section>
+		
 <section class="section">
     <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
@@ -266,7 +293,7 @@ segmentation and retrieval of free-form language queries"/>
             </div>
         </div>
         <div class="columns is-centered">
-            <iframe width="700" height="394" src="https://www.youtube.com/embed/B9LK-Fxu7ao"
+            <iframe width="700" height="394" src="TBD"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
@@ -361,10 +388,10 @@ segmentation and retrieval of free-form language queries"/>
                     class="layered-paper-big" style="height:175px"
                     src="./sources/paper.png"/></a>
             <span style="font-size:14pt">A. Vobecky, O. Siméoni, D. Hurych, S. Gydaris, A. Bursuc, P. Pérez, and J. Sivic.<br>
-				<b>{POP}-3D: Open-Vocabulary 3D Occupancy Prediction from Images</b><br>
+				<b>POP-3D: Open-Vocabulary 3D Occupancy Prediction from Images</b><br>
                 NeurIPS, 2023.<br>
-				(hosted on <a href="" target="_blank"
-                              rel="noopener noreferrer">ArXiv</a>, <a href="">full PDF</a>)<br>
+				(hosted on <a href="" target="_blank" rel="noopener noreferrer">ArXiv</a>, 
+		    <a href="" target="_blank" rel="noopener noreferrer">full PDF</a>)<br>
 				</span>
         </div>
 
@@ -375,7 +402,7 @@ segmentation and retrieval of free-form language queries"/>
         </div>
         <div class="columns is-centered">
         <pre><code id="bibtex">@article{vobecky2023POP3D,
-  title={{POP}-3D: Open-Vocabulary 3D Occupancy Prediction from Images},
+  title={POP-3D: Open-Vocabulary 3D Occupancy Prediction from Images},
   author={Antonin Vobecky and Oriane Siméoni and David Hurych and Spyros Gidaris and Andrei Bursuc and Patrick Pérez and Josef Sivic},
  booktitle = {Advances in Neural Information Processing Systems},
  volume = {36},
